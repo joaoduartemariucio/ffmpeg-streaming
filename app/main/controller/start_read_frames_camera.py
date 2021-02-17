@@ -31,6 +31,7 @@ class StartReadFramesCamera(Resource):
             print("THREAD_JA_INICIADA video_url: %s key: %s" % (video_url, frame_key))
             return {"status": "THREAD_JA_INICIADA" , "key": frame_key} 
         else:
+            last_frame_camera[frame_key] = "CONECTANDO"
             thread = VideoFramesReadController(threads.count(self) + 1, frame_key, video_url, thread_lock)
             thread.start()
 
