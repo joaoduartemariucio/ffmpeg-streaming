@@ -1,10 +1,6 @@
-from flask import send_file, request, Response
+from flask import request, Response
 from flask_restful import Resource
 import cv2
-import os
-import numpy as np
-import datetime
-import time
 
 from app.main.service.video_frames_read_service import last_frame_camera
 

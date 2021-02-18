@@ -1,12 +1,9 @@
-from flask import send_file, request
+from flask import request
 from flask_restful import Resource, reqparse
 import threading
 import base64
-import cv2
-import os
 
 from app.main.service.video_frames_read_service import VideoFramesReadService
-from app.main.service.video_frames_read_service import last_frame_camera
 
 video_post_args = reqparse.RequestParser()
 video_post_args.add_argument("video_url", type=str, help="link do video nao foi enviado", required=True)
@@ -31,7 +28,6 @@ class StartReadFramesCamera(Resource):
             print("THREAD_JA_INICIADA video_url: %s key: %s" % (video_url, frame_key))
             return {"status": "THREAD_JA_INICIADA" , "key": frame_key} 
         else:
-            last_frame_camera[frame_key] = "CONECTANDO"
             thread = VideoFramesReadService(threads.count(self) + 1, frame_key, video_url, thread_lock)
             thread.start()
 

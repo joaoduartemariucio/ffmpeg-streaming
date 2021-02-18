@@ -2,7 +2,6 @@
 import cv2
 import time
 import threading
-import os
 
 global last_frame_camera
 last_frame_camera = {}

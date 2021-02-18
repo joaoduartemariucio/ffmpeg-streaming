@@ -25,12 +25,12 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    TESTING = True
     SQLALCHEMY_DATABASE_URI = "mssql+pyodbc:///?odbc_connect=%s" % params
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SESSION_COOKIE_DOMAIN = False
     SERVER_NAME = "172.16.2.140:1882"
     CORS_HEADERS = "Content-Type"
+    CORS_RESOURCES = {r"/*": {"origins": "*"}}
 
 
 class TestingConfig(Config):
