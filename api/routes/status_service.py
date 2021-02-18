@@ -1,5 +1,5 @@
 from flask_restful import Resource
-from api.controller.start_read_frames_camera import threads_abertas
+from api.routes.start_read_frames_camera import threads_abertas
 
 class StatusService(Resource):
 
