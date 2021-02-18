@@ -1,6 +1,7 @@
 import os
 import urllib.parse 
 import pyodbc
+import flask_cors 
 
 secret = "q68epcrUK0Qfap33dve0pOlI6nPgjxHT"
 
@@ -30,7 +31,6 @@ class DevelopmentConfig(Config):
     SESSION_COOKIE_DOMAIN = False
     SERVER_NAME = "172.16.2.140:1882"
     CORS_HEADERS = "Content-Type"
-    CORS_RESOURCES = {r"/*": {"origins": "*"}}
 
 
 class TestingConfig(Config):
