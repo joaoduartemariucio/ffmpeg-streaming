@@ -1,4 +1,4 @@
-from app.main import db, flask_bcrypt
+from api import db, flask_bcrypt
 
 
 class AppSecretKey(db.Model):

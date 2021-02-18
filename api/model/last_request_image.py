@@ -1,4 +1,4 @@
-from .. import db, flask_bcrypt
+from api import db, flask_bcrypt
 
 
 class LastRequestImage(db.Model):

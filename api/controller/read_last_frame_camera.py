@@ -2,7 +2,7 @@ from flask import request, Response
 from flask_restful import Resource
 import cv2
 
-from app.main.service.video_frames_read_service import last_frame_camera
+from  api.service.video_frames_read_service import last_frame_camera
 
 
 class ReadLastFrameCamera(Resource):

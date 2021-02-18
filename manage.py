@@ -3,9 +3,9 @@ import unittest
 
 from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
-from app.main import create_app, db
-from app.main.model import last_request_image
-from app.main.model import app_secret_key
+from api import create_app, db
+from api.model import last_request_image
+from api.model import app_secret_key
 
 app = create_app(os.getenv('BOILERPLATE_ENV') or 'dev')
 

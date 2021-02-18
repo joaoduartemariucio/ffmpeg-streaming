@@ -3,12 +3,10 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_restful import Api
-from multiprocessing import Process
-from app.main.controller.read_last_frame_camera import ReadLastFrameCamera
-from app.main.controller.status_service import StatusService
-from app.main.controller.start_read_frames_camera import StartReadFramesCamera
-import time
-from app.main.config import config_by_name
+from api.controller.read_last_frame_camera import ReadLastFrameCamera
+from api.controller.status_service import StatusService
+from api.controller.start_read_frames_camera import StartReadFramesCamera
+from  api.config import config_by_name
 
 db = SQLAlchemy()
 flask_bcrypt = Bcrypt()

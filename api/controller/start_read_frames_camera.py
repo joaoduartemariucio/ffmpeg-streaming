@@ -3,7 +3,7 @@ from flask_restful import Resource, reqparse
 import threading
 import base64
 
-from app.main.service.video_frames_read_service import VideoFramesReadService
+from  api.service.video_frames_read_service import VideoFramesReadService
 
 video_post_args = reqparse.RequestParser()
 video_post_args.add_argument("video_url", type=str, help="link do video nao foi enviado", required=True)
