@@ -6,7 +6,7 @@ import numpy as np
 import datetime
 import time
 
-from app.main.service.video_frames_read_controller import last_frame_camera
+from app.main.service.video_frames_read_service import last_frame_camera
 
 
 class ReadLastFrameCamera(Resource):

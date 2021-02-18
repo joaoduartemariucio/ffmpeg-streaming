@@ -8,7 +8,7 @@ global last_frame_camera
 last_frame_camera = {}
 
 
-class VideoFramesReadController(threading.Thread):
+class VideoFramesReadService(threading.Thread):
 
     def __init__(self, thread_id, name, video_url, thread_lock):
         threading.Thread.__init__(self)
